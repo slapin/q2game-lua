@@ -378,3 +378,8 @@ distclean:
 	@-rm -rf $(BUILD_DEBUG_DIR) $(BUILD_RELEASE_DIR)
 	@-rm -f `find . \( -not -type d \) -and \
 		\( -name '*~' \) -type f -print`
+
+cscope:
+	ls *.c *.h >cscope.files
+	cscope -b
+
